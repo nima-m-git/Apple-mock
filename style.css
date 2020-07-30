@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.menu-bar {
+    border: 1px solid grey;
+    width: 980px;
+    height: 36px;
+    margin: auto;
+}
+
+.main {
+    background-image: url("https://web.archive.org/web/20140301004302im_/http://images.apple.com/v/home/as/images/your_verse_hero_2x.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.articles {
+    display: flex;
+}
+
+.articles > * {
+    border: 1px solid red;
+    flex: 1 0 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    padding: 20px 10px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+footer .top-left {
+    float: left;
+    width: 49%;
+}
+
+footer .top-right {
+    float: right;
+    width: 51%;
+}
+
+footer .bottom {
+    clear: both;
+}
