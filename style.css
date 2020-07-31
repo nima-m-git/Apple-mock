@@ -1,22 +1,38 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
 .menu-bar {
     border: 1px solid grey;
+    position: relative;
+    background-position: 0% 0%, 0% 0%, 50% 50%, 0% 0%;
     width: 980px;
     height: 36px;
     margin: auto;
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.menu-bar button {
+    flex: 1;
+    color: white;
 }
 
 .main {
-    background-image: url("https://web.archive.org/web/20140301004302im_/http://images.apple.com/v/home/as/images/your_verse_hero_2x.jpg");
+    background: url("https://web.archive.org/web/20140301004302im_/http://images.apple.com/v/home/as/images/your_verse_hero_2x.jpg") 50% 100% no-repeat;
+    background-size: 1440px 1315px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 538px;
+    width: 1440px;
+    border: 1px solid red;
+    color: white;
 }
 
 .articles {
@@ -34,7 +50,10 @@
 footer {
     padding: 20px 10px;
     font-size: 12px;
-    display: inline-block;
+}
+
+.container {
+    width: 980px;
 }
 
 footer .top-left {
@@ -49,4 +68,5 @@ footer .top-right {
 
 footer .bottom {
     clear: both;
+    padding-top: 1.5em;
 }
