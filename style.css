@@ -1,4 +1,9 @@
-* {
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+*, input, button {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -6,20 +11,106 @@
 
 /* Menu */
 .menu-bar {
-    border: 1px solid grey;
     position: relative;
-    background-position: 0% 0%, 0% 0%, 50% 50%, 0% 0%;
+    bottom: 100px;
     width: 980px;
     height: 36px;
     margin: auto;
     display: flex;
     border-radius: 5px;
-    border: 1px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px 0 ;
+    background: linear-gradient(
+        to bottom,
+        rgb(100, 100, 100) 0%,
+        rgb(115, 115, 115) 10%,
+        rgb(105, 105, 105) 49%,
+        rgb(90, 90, 90) 51%,
+        rgb(110, 110, 110) 90%,
+        rgb(120, 120, 120) 100%
+    );
 }
 
-.menu-bar button {
+.menu-bar > * {
     flex: 1;
     color: white;
+    border: none;
+    border-right: 1px solid rgb(141, 141, 141);
+    font-size: 14px;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("https://web.archive.org/web/20140301004259im_/http://images.apple.com/global/nav/images/globalnav_text.svg");
+}
+
+.menu-bar button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#home {
+    border-radius: 5px 0 0 5px;
+    background-position: 50% 0;
+}
+
+#store {
+    background-position: 50% 13%;
+}
+
+#mac {
+    background-position: 50% 28%;
+}
+
+#iPod {
+    background-position: 50% 42%;
+}
+
+#iPhone {
+    background-position: 50% 57%;
+}
+
+#iPad {
+    background-position: 50% 72%;
+}
+
+#iTunes {
+    background-position: 50% 87%;
+}
+
+#support {
+    background-position: 50% 101%;
+}
+
+.searchbar-container {
+    border-radius: 0 5px 5px 0;
+    background-image: none;
+    flex-basis: 25px;
+}
+
+.search-form {
+    width: 100%;
+    padding: 8px 13px;
+}
+
+#searchbar {
+    border-bottom: 1px solid rgb(150, 150, 150);
+    border-top: 2px solid rgba(44, 44, 44, 0.801);
+    border-left: 1px solid grey;
+    border-right: none;
+    border-radius: 25px;
+    width: 100%;
+    padding-left: 15px;
+    background: linear-gradient(
+        to bottom,
+        rgb(125, 125, 125) 0%,
+        rgb(130, 130, 130) 50%,
+        rgb(120, 120, 120) 50%,
+        rgb(126, 126, 126) 100%
+    );
+    color: white;
+    font-weight: 450;
+}
+
+#searchbar:click {
+    color: black;
+    background: white;
 }
 
 /* Main */
@@ -31,10 +122,38 @@
     justify-content: center;
     align-items: center;
     height: 538px;
-    width: 1440px;
+    max-width: 1440px;
     margin: auto;
-    border: 1px solid red;
     color: white;
+}
+
+.top-text {
+    background: url("https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/your_verse_title_small_2x.png");
+    background-size: cover;
+    width: 980px;
+    height: 100px;
+}
+
+.mid-text {
+    background: url('https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/your_verse_subhead_small_2x.png');
+    background-size: cover;
+    width: 980px;
+    height: 82px;
+}
+
+.bottom-text {
+    background: url("https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/cta_your_verse_27pt_2x.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 980px;
+    height: 64px;
+    background-position-y: 30px;
+}
+
+.bottom-text:hover{
+    position: relative;
+    top: 28px;
+    background-position-y: -30px;
 }
 
 .articles {
@@ -44,7 +163,6 @@
 }
 
 .articles > * {
-    border: 1px solid red;
     flex: 1 0 250px;
     display: flex;
     flex-direction: column;
@@ -56,27 +174,42 @@
 #iphone5s {
     background: url("https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/promo_iphone5s_2x.jpg");
     background-size: cover;
+    background-position: 50% 0;
 }
 
 #iphone5c {
     background: url("https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/promo_iphone5c_2x.jpg");
     background-size: cover;
+    background-position: 50% 0;
 }
 
 #bday {
     background: url("https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/promo_30_years_2x.jpg");
     background-size: cover;
+    background-position: 50% 0;
 }
 
 #supplier {
     background: url("https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/promo_supplier_responsibility_2x.jpg");
     background-size: cover;
+    background-position: 50% 0;
 }
 
 /* Footer */
 footer {
     padding: 20px 10px;
-    font-size: 12px;
+    font-size: 10px;
+    color: rgba(97, 97, 97, 0.822);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+footer a {
+    text-decoration: none;
+    color: #08c;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 .container {
